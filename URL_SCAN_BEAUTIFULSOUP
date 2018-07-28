@@ -1,0 +1,7 @@
+git init
+testurl = "https://www.google.com"
+testpage = urllib2.urlopen(testurl)
+mysoup = BeautifulSoup(testpage)
+links = mysoup.findAll('a')
+for link in links:
+    print(link['href'])
